@@ -154,12 +154,16 @@ Write the analytical response entirely in polite and professional INDONESIAN lan
 
 export default defineConfig(() => {
   return {
+    base: '/PERSEUSINTELLV1/', // 🔥 INI WAJIB UNTUK GITHUB PAGES
+
     plugins: [react(), tailwindcss(), apiServerPlugin()],
+
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
       },
     },
+
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
